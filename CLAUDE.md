@@ -67,17 +67,10 @@ OpenAPI: `/openapi` — Swagger UI: `/swagger-ui`
 
 Seven FF-ICE event XML files in `src/main/resources/events/` (FIXM 4.3 format): filed-flight-plan, filing-status, flight-arrival, flight-cancellation, flight-departure, flight-plan-update, planning-status.
 
-## Mandatory Standards (from Cursor rules)
+## Mandatory Standards
 
-- **File size limit**: 400 lines max per `.java` file
-- **Inner classes**: Forbidden — every class/record/interface in its own file
-- **Logging**: Always `@Slf4j` (Lombok), never `LoggerFactory.getLogger()`
-- **Container runtime**: Podman only (no Docker)
 - **JSON in shell**: `jq` only (no Python/Node)
 - **K8s resources**: YAML files only, apply with `oc apply -f`
-- **Diagrams**: Mermaid only in markdown (no SVG images)
-- **Deployment commands**: Require explicit user confirmation before execution
-- **AI co-authorship trailers**: Absolutely forbidden in git commits
 - **Consumer ↔ Validator rule**: A consumer never connects to its own provider — it always connects to the consumer-validator
 
 ## Configuration (application.properties)
